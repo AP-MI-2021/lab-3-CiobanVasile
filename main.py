@@ -108,6 +108,11 @@ def test_get_longest_all_primes():
     assert get_longest_all_primes([12,4,6,8,10]) == []
     assert get_longest_all_primes([10,11,13,17,19,20]) == [11,13,17,19]
 
+def test_get_longest_prime_digits():
+    assert get_longest_prime_digits([222,333,444,555,777,222,333]) == [555,777,222,333]
+    assert get_longest_prime_digits([44,44,22,22,22,66,55,33]) == [22,22,22]
+    assert get_longest_prime_digits([333,333,444,222,222,555,888]) == [222,222,555]
+
 
 def test_is_digit_prime():
     assert is_digit_prime(2222) == True
@@ -133,6 +138,7 @@ def main():
 
 
 if __name__ == '__main__':
+    test_get_longest_prime_digits()
     test_get_longest_all_primes()
     test_is_prime()
     test_is_digit_prime()
